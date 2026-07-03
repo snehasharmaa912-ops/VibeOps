@@ -1,8 +1,8 @@
 <div align="center">
 
-# DEMO 🔗: https://vibeops-snehasharmaa.streamlit.app/
-
 # ✨ VibeOps
+
+# LIVE DEMO 🔗: https://vibeops-snehasharmaa.streamlit.app/
 
 ### Multi-Agent AI Engineering Workspace
 
