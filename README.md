@@ -1,5 +1,7 @@
 <div align="center">
 
+# DEMO 🔗: https://vibeops-snehasharmaa.streamlit.app/
+
 # ✨ VibeOps
 
 ### Multi-Agent AI Engineering Workspace
