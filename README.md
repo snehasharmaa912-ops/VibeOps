@@ -40,17 +40,6 @@
 
 ---
 
-## 📚 Table of Contents
-
-- [🚀 What is VibeOps?](#-what-is-vibeops)
-- [🏗️ Architecture](#️-architecture)
-- [🛡️ Failure Handling](#️-failure-handling)
-- [🔮 Roadmap](#-what-id-do-with-more-time)
-- [⚙️ Setup](#️-setup-100-free-to-run)
-- [🧰 Tech Stack](#-tech-stack)
-
----
-
 ## 🚀 What is VibeOps?
 
 > No more copy-pasting between AI chat tabs for research, then coding, then testing, then docs.
