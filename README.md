@@ -49,17 +49,17 @@ A central **Orchestrator** delegates a task to three specialist agents — 🔍 
 
 ```mermaid
 flowchart TD
-    U([👤 User Request]) --> O{🧠 Orchestrator}
-    O --> R[🔍 Research Agent]
-    R --> C[💻 Code Agent]
-    C --> T[🧪 Test Agent]
-    T --> D[📝 Doc Agent]
-    D --> F([✅ Final Output])
+    U([User Request]) --> O{Orchestrator}
+    O --> R[Research Agent]
+    R --> C[Code Agent]
+    C --> T[Test Agent]
+    T --> D[Doc Agent]
+    D --> F([Final Output])
 
-    R -.write/read.-> M[(🗂️ Shared Memory<br/>SQLite + Chroma)]
-    C -.write/read.-> M
-    T -.write/read.-> M
-    D -.write/read.-> M
+    R -. write/read .-> M[(Shared Memory: SQLite + Chroma)]
+    C -. write/read .-> M
+    T -. write/read .-> M
+    D -. write/read .-> M
 
     style U fill:#6C63FF,color:#fff,stroke:#333
     style F fill:#22C55E,color:#fff,stroke:#333
@@ -90,10 +90,10 @@ An explicit `max_steps` guard means the pipeline can never loop forever, and eve
 ```mermaid
 flowchart LR
     A[Agent Output] --> B{Status?}
-    B -- ✅ success --> C[(SQLite<br/>Working Memory)]
-    B -- ✅ success --> D[(Chroma<br/>Long-Term Memory)]
-    B -- ❌ failed --> C
-    B -- ❌ failed -.never indexed.-> D
+    B -- success --> C[(SQLite Working Memory)]
+    B -- success --> D[(Chroma Long-Term Memory)]
+    B -- failed --> C
+    B -. failed, never indexed .-> D
 ```
 
 | Layer | Storage | Purpose |
