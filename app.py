@@ -1,9 +1,17 @@
+import os
+
 import streamlit as st
 from dotenv import load_dotenv
 
-from src.orchestrator import Orchestrator
-
 load_dotenv()
+
+# Pull from Streamlit Cloud secrets if present (local .env is used otherwise)
+if "ANTHROPIC_API_KEY" in st.secrets:
+    os.environ["ANTHROPIC_API_KEY"] = st.secrets["ANTHROPIC_API_KEY"]
+if "CLAUDE_MODEL" in st.secrets:
+    os.environ["CLAUDE_MODEL"] = st.secrets["CLAUDE_MODEL"]
+
+from src.orchestrator import Orchestrator
 
 st.set_page_config(page_title="VibeOps", layout="wide")
 st.title("VibeOps")
