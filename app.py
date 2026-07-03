@@ -1,15 +1,14 @@
 import os
-
 import streamlit as st
 from dotenv import load_dotenv
 
 load_dotenv()
 
 # Pull from Streamlit Cloud secrets if present (local .env is used otherwise)
-if "ANTHROPIC_API_KEY" in st.secrets:
-    os.environ["ANTHROPIC_API_KEY"] = st.secrets["ANTHROPIC_API_KEY"]
-if "CLAUDE_MODEL" in st.secrets:
-    os.environ["CLAUDE_MODEL"] = st.secrets["CLAUDE_MODEL"]
+if "GROQ_API_KEY" in st.secrets:
+    os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
+if "GROQ_MODEL" in st.secrets:
+    os.environ["GROQ_MODEL"] = st.secrets["GROQ_MODEL"]
 
 from src.orchestrator import Orchestrator
 
